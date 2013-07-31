@@ -1,0 +1,147 @@
+* { margin: 0; padding: 0; font-family: Tahoma, Geneva, sans-serif; font-size: 14px; color: #878787; }
+html, body { height: 100%; margin: 0; padding: 0; }
+a, a:active { outline: none; text-decoration: none; cursor: pointer; }
+a span { display: none; cursor: pointer; }
+a img { border: none; }
+
+ul { list-style: none; }
+
+.div956 { width: 956px; margin: 0 auto; }
+
+.estruturaTopo { float: left; width: 100%; background-color: #e60811; }
+.estruturaTopo .bgTopo { float: left; position: relative; width: 100%; height: 73px; }
+.estruturaTopo .bgTopo .wrapTituloTopo { position: absolute; left: 170px; top: 11px; }
+.estruturaTopo .bgTopo .wrapTituloTopo span { color: #FFF; font-size: 30px; }
+.estruturaCorpo { float: left; width: 100%; background: url(Images/bgCorpoRepeat.png) 0 0 repeat-x; min-height: 600px; }
+.estruturaRodape { float: left; width: 100%; height: 73px; background: url(Images/bgRodapeRepeat.png) 0 0 repeat-x; }
+.estruturaRodape .bgRodape { float: left; width: 100%; height: 73px; background: url(Images/bgRodape.png) 0 0 no-repeat; }
+
+.corpoRight { float: left; width: 712px; }
+
+.corpoLeft { float: left; padding-left: 18px; width: 226px; }
+.corpoLeft .menuLeftTopo { float: left; width: 100%;  }
+.corpoLeft .menuLeftTopo .menuLeftTopo_wrapLogOff { float: left; width: 100%; height: 50px; position: relative; }
+.corpoLeft .menuLeftTopo .menuLeftTopo_wrapLogOff a { bottom: 8px; left: 10px; position: absolute; font-size: 13px; color: #99a6a3; text-decoration: underline; }
+.corpoLeft .menuLeftTopo .menuLeftTopo_wrapLogOff a span { display: inline; }
+.corpoLeft .menuLeftTopo .menuLeftTopo_wrapLogOff a:hover { font-weight: bold; }
+.corpoLeft .menuLeftTopo .menuLeftTopo_wrapNomeUser { background: url(Images/ico_dados_user.PNG) no-repeat left center; width: 175px;  float: left;position: relative; border:2px solid #E6ECE8; margin:0px auto; padding-left: 51px;-moz-border-radius:7px;-webkit-border-radius:7px;border-radius:7px;}
+.corpoLeft .menuLeftTopo .menuLeftTopo_wrapNomeUser div { border-left: 2px solid #E6ECE8; text-align: center; font-size: 11px;padding: 10px ; width: 150px; }   
+.corpoLeft .menuLeft_wrapNavegacao { float: left; width: 100%; }
+.corpoLeft .menuLeft_wrapNavegacao div.menuPrincipalTopo { float: left; width: 100%; height: 28px; background: url(Images/bgMenuTopo.png) 0 0 no-repeat; }
+.corpoLeft .menuLeft_wrapNavegacao div.menuPrincipalRodape { float: left; width: 100%; height: 11px; background: url(Images/bgMenuRodape.png) 0 0 no-repeat; }
+
+/*MEU LATERAL*/
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem { float: left; width: 100%; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem > li > a { display: block; width: 226px; height: 49px; line-height: 49px; text-indent: 30px; text-decoration: none; font-size: 13px; color: #99a6a3; background: url(Images/bgMenuComSeta.png) 0 0 no-repeat; border: none; }
+/*.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem > li > span { display: block; width: 226px; height: 49px; line-height: 49px; text-indent: 30px; text-decoration: none; font-size: 13px; color: #99a6a3; background: url(Images/bgMenuComSeta.png) 0 0 no-repeat; border: none; }*/
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem > li > ul { width: 100%; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem > li > ul > li ul { margin-left: 20px; border: none; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li a img { vertical-align: middle; padding-right: 8px; height: 32px; width: 32px; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li.noSubmenu a { background: url(Images/bgMenuSemSeta.png) 0 0 no-repeat !important; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem > li > a:hover, ul.menuPrincipalListagem > li.menuAtual > a { background: url(Images/bgMenuComSeta.png) 0 -49px no-repeat; color: #99a6a3; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li { float: left; width: 100%; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li ul { background-color: #d4dcd6; float: left; display: none; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li ul li { float: left; width: 100%; padding-bottom: 5px; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li li a { display: block; text-decoration: none; font-weight: normal; font-size: 12px; background: transparent url(Images/sideli.png) no-repeat 0px 10px; color: #747875; margin-left: 40px; padding-top: 5px; padding-left: 15px; width: 170px; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li li a:hover { background-position: 0 -31px; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li li a.subMenuAtual { background-position: 0 -31px; color: #747875 !important; font-weight: bold; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem li li.current a { background-position: 37px -31px; }
+.corpoLeft .menuLeft_wrapNavegacao ul.menuPrincipalListagem a:hover, ul.menuPrincipalListagem li.menuAtual > a { color: #747875 !important; font-weight: bold; }
+/*MEU LATERAL*/
+
+/*PAGINA LOGIN.ASPX*/
+.paginaLogin { margin: 45px auto; width: 646px; height: 480px; }
+.paginaLogin_wrapLogoCliente { float: left; width: 646px; height: 167px; text-align: center; }
+.paginaLogin_wrapFormAuth { float: left; width: 646px; height: 311px; background: url(Images/bgPaginaLoginForm.png) center center no-repeat; position: relative; z-index: 0 }
+.paginaLogin_wrapFormAuth h1.paginaLogin_h1Acessar { font-size: 30px; color: #99a6a3; font-weight: normal; position: absolute; top: 55px; left: 210px; }
+.paginaLogin_wrapFormAuth label.paginaLogin_lblLogin { font-size: 13px; color: #747875; position: absolute; top: 125px; left: 170px; }
+.paginaLogin_wrapFormAuth label.paginaLogin_lblSenha { font-size: 13px; color: #747875; position: absolute; top: 172px; left: 170px; }
+.paginaLogin_wrapFormAuth input.paginaLogin_txtLogin { height: 26px; line-height: 26px; font-size: 13px; width: 238px; color: #000; position: absolute; left: 220px; top: 120px; border: none; }
+.paginaLogin_wrapFormAuth input.paginaLogin_txtSenha { height: 26px; line-height: 26px; font-size: 13px; width: 238px; color: #000; position: absolute; left: 220px; top: 168px; border: none; }
+.paginaLogin_wrapFormAuth img.paginaLogin_btnAcessar { position: absolute; top: 220px; left: 285px; }
+.paginaLogin_Loader img{ position: absolute; top: 80%; left: 50%; z-index: 2; background: white;  }
+/*PAGINA LOGIN.ASPX*/
+
+/*PAGINA LISTAGEM*/
+.paginaListagem { float: left; width: 680px; margin-left: 30px; margin-top: 45px; }
+.paginaListagemTitulo { width: 638px; min-height: 50px; background: url(Images/bgBordaTituloPagina.png) 0 bottom no-repeat; margin-bottom: 10px; }
+.paginaListagemTitulo h1 { vertical-align: middle; float: left; width: auto; font-size: 30px; font-weight: normal; color: #d71921; margin-top: 5px; margin-bottom:5px;  margin-right: 5px; }
+.paginaListagemTitulo h5 { height: 50px; width: 500px;line-height: 50px; float: left; witdh: auto; font-size: 14px; font-weight: bold; color: #d71921; margin-bottom:5px; margin-left: 25px; }
+
+.paginaListagemWrapAddNovo { float: left; width: 330px; }
+.paginaListagemWrapAddNovo a { background: url(Images/bgBtnAddNovoElemento.png) 0 bottom no-repeat; height: 34px; display: block; }
+.paginaListagem_wrapQtdListagem { text-align: left; width: 50%; }
+.paginaListagem_wrapQtdListagem label { font-size: 12px;  position: relative; left: 255px; }
+.paginaListagem_wrapQtdListagem select { position: relative; left: 262px;  font-size: 12px; height: 23px; }
+
+
+/* PAGINA LOGOFF*/
+.paginaLogoff_Loader img{ position: absolute; top: 50%; left: 60%; z-index: 2; background: white;  }
+
+.paginaListagemWrapExport { float: left; width: 30%; margin: 5px 0 5px 0; }
+.paginaListagemWrapExport a { background: url(Images/bgBtnAddNovoElemento.png) 0 bottom no-repeat; width: 198px; height: 34px; display:block;}
+.corpoTabelaListagem{text-align: center;}
+.paginaListagemWrapTabela { float: left; width: 100%; overflow: auto; margin-bottom: 5px; }
+table.data { width: 100%; border: 0; border-collapse: collapse; }
+table.data thead th { font-size: 12px; font-weight: bold; text-align: left; padding: 10px; background-color: #333; color: #FFF; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+table.display thead th { background-color: #989b99 !important;  text-align: center}
+table.data td { vertical-align: top; }
+table.data tbody tr td { background: #FFF; border-bottom: 1px dotted #DDD; }
+table.data th { padding: 10px 0; }
+table.data tbody td { padding: 10px; font-size: 12px; vertical-align: middle; }
+table.data tr.even td { background: #F9F9F9; }
+table.data.stripe tr:nth-child(odd) td { background-color: #F6F6F6; }
+table.data.stripe tr:nth-child(even) td { background-color: #FFF; }
+table.data tbody td.paginaListagem_wrapBotoes { padding: 5px 0 4px 5px !important; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnEditar { float: left; margin-bottom: 7px; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnEditar:hover { text-decoration: underline; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnEditar img { display: block; float: left; margin-right: 3px; margin-top: 1px; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnEditar span { display: inline; font-size: 12px; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnDeletar { float: left; width: 60px; clear: left; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnDeletar:hover { text-decoration: underline; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnDeletar img { display: block; float: left; margin-right: 3px; margin-top: 1px; }
+table.data tbody td.paginaListagem_wrapBotoes .paginaListagem_btnDeletar span { display: inline; font-size: 12px; }
+
+html > body thead.fixedHeader { width: 680px; display: block; }
+tbody.scrollContent { display: block; display: inherit\9; height: 255px; height: auto\9; overflow: auto; width: 680px; }
+.fixTabIE { height:255px\9; overflow:auto\9;}
+
+.wrapChkMarcar input { vertical-align: text-bottom; cursor: pointer; }
+.wrapChkMarcar label { font-size: 12px; margin-left: 5px; cursor: pointer; }
+
+.paginaListagem_wrapPaginacao { float: left; width: 100%; text-align: center; position: relative; }
+.paginaListagem_wrapPaginacao .pagerList { float: right; width: auto; margin-right: 8px; }
+.paginaListagem_wrapPaginacao .pagerList div.disabled { display: none; }
+.paginaListagem_wrapPaginacao .pagerList .wrapCentro { float: left; }
+.paginaListagem_wrapPaginacao .pagerList .wrapCentro a span { display: block; color: #99a6a3; font-size: 11px; cursor: pointer; margin: 5px; }
+.paginaListagem_wrapPaginacao .pagerList .wrapCentro ul li { margin: 0; width: auto; margin: 5px 3px 5px 3px; cursor: pointer; font-size: 13px; float: left; color: #808080; }
+.paginaListagem_wrapPaginacao .pagerList .wrapCentro ul li:hover, .pagerList .esquerda:hover, .pagerList .direita:hover { text-decoration: underline; }
+.paginaListagem_wrapPaginacao .pagerList .wrapCentro ul li.current { font-weight: bolder; }
+
+.pagerListNext { float: left; margin-top: 3px; }
+.pagerListNext div a { float: left; display: block; width: 23px; height: 20px; background: url(Images/bgPagerListControls.png) -23px 0 no-repeat; }
+.pagerListNext div a:hover { background-position: -23px -20px; }
+.pagerListPrevious { float: left; margin-top: 3px; }
+.pagerListPrevious div a { float: left; display: block; width: 23px; height: 20px; background: url(Images/bgPagerListControls.png) 0 0 no-repeat; }
+.pagerListPrevious div a:hover { background-position: 0px -20px; }
+
+.paginaListagemWrapFiltros { float: left; width: 100%; background: url("Images/bgBordaTituloPagina.png") 0 bottom repeat-x; margin-bottom: 5px; }
+.filtroListagem_label { text-align: right; vertical-align: middle; width: 100px; padding-right: 10px; padding-bottom: 6px; padding-top: 4px; }
+.filtroListagem_campo { text-align: left; vertical-align: middle; width: 255px; padding-right: 5px; }
+.filtroListagem_campo input { width: 200px; }
+.filtroListagem_campo select { width: 190px; }
+.filtroListagem_wrapBtnPesquisar { text-align: right; }
+.filtroListagem_wrapBtnPesquisar img { margin: 10px 15px 10px 0; cursor: pointer; }
+
+.filtroListagem_campoDataDe { width: 100px; }
+.filtroListagem_campoDataDe img, .filtroListagem_campoDataAte img { margin-left: 5px; float: left; margin-top: 4px; cursor: pointer; }
+.filtroListagem_labelDataAte { width: 20px; padding-right: 5px; }
+.filtroListagem_campoDataAte { width: 105px; }
+.filtroListagem_campoDataDe input, .filtroListagem_campoDataAte input { float: left; width: 70px; vertical-align: middle; line-height: 20px; height: 20px; font-size: 12px; }
+
+.paginaVideoConteudoListagem { margin-left: 10px; margin-top: 15px; }
+.paginaVideoConteudoListagem_tdMarcar input { vertical-align: text-bottom; cursor: pointer; }
+.paginaVideoConteudoListagem_tdMarcar label { font-size: 12px; margin-left: 5px; cursor: pointer; }
+.btnVincularVideos { position: absolute; bottom: 10px; left: 10px; }
+
+a.icon-exportar { background: url("Images/bgBtnExportarExcel.png") no-repeat scroll 0 bottom transparent; display: block; height: 34px; width: 198px; }

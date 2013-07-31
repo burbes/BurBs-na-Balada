@@ -1,0 +1,48 @@
+﻿.paginaFormulario { float: left; width: 692px; margin-top: 50px; margin-left: 20px; }
+.paginaFormulario_titulo { float: left; width: 638px; min-height: 50px; background: url(Images/bgBordaTituloPagina.png) 0 bottom no-repeat; margin-bottom: 10px; }
+.paginaFormulario_titulo h1 { font-size: 30px; font-weight: normal; color: #d71921; margin-top: 5px; margin-bottom:5px; }
+
+
+.form { padding: 0; margin: 0; }
+.form .field { width: 100%; float: left; }
+
+.form .small { width: 100px; position:relative; left: 110px;}
+.form .medium { width: 300px; position:relative; left: 110px;}
+.form .order { width: 40px; }
+div.field { padding-bottom: 15px; position: relative; }
+
+.lblAtivo{ position: relative; left: 135px; top: -20px; }
+.lblAtivoCheckBox { width: 100%; position: relative; left: 100px; }
+input[type=checkbox]{ cursor: pointer; }
+
+table.radioList td { padding-right: 25px; }
+table.radioList td input { margin-right: 5px; }
+table.checkList td { padding-right: 25px; }
+table.checkList td input { margin-right: 5px; }
+
+
+label.label, span.label  { position: relative; left: 110px; display: inline-block; text-align: right; color: #747875; font-size: 13px; float:left; }
+label.select { position: relative; left: 110px; padding-right: 10px; display: inline-block; color: #747875; font-size: 13px; float:left; }
+#lblStatus { position: relative; left: 140px;}
+.divAtivo { width: 100%;}
+.celStatus input {position:relative; left: 160px;}
+
+span.label { float: left; }
+p.field_help { font-size: 12px; margin-left: 155px; float:left; clear:left; }
+
+div.textarea label.label { vertical-align: top; }
+div.textarea textarea { width: 300px; height: 100px; }
+div.selector, div.uploader { float:left; }
+
+.paginaFormulario_wrapBotoes { float: left; margin-left: 150px; margin-top: 15px; }
+.paginaFormulario_wrapBotoes img { margin-right: 15px; cursor: pointer; }
+
+label.error { clear: both; color: red; display: block; float: left; font-size: 11px; margin-left: 157px; width: auto; float:left; }
+
+
+.wrapItemModal { float:left; clear:both; width:400px; max-height:281px; margin-left:145px; }
+.itemModal_wrapBotao { float:left; width:100%; }
+.itemModal_wrapListagem { float:left; width:100%; max-height:241px; overflow:auto; margin-top:5px; }
+.itemModal_wrapListagem table.data tbody td { padding-top:5px; padding-bottom:5px; }
+.wrapCKEditorForm { float:left; clear:both; width:100%; margin-top:7px; margin-left:10px; }
+.wrapCKEditorForm a span { display:inline; }

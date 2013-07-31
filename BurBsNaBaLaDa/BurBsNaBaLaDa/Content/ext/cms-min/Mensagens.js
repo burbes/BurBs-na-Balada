@@ -1,0 +1,1 @@
+Ext.Messages={Endereco_Principal_Alterar:"O Endere\u00e7o Principal ser\u00e1 alterado para este!",MeioComunicacao_Principal_Alterar:"O Meio de Comunica\u00e7\u00e3o Principal ser\u00e1 alterado para este!",Receita_Principal_Alterar:"A Receita Principal ser\u00e1 alterado para esta!"}

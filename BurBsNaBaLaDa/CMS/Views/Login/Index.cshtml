@@ -1,0 +1,31 @@
+﻿<script src="@Url.Content("~/Scripts/Login/Login.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.min.js")" type="text/javascript"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<form id="loginForm" action="" method="post">
+<div id="dialogLogin" style="display: none;">
+    <p>
+        <span id="dialogMessageLogin"></span>
+    </p>
+</div>
+<div class="paginaLogin">
+    <div class="paginaLogin_wrapLogoCliente">
+        <img src="@Url.Content("~/Content/Images/imgLogoClientePaginaLogin.png")" />
+    </div>
+    <div class="paginaLogin_Loader" style="display: none;">
+        <img src="@Url.Content("~/Content/Images/Loader.gif")" />
+    </div>
+    <div class="paginaLogin_wrapFormAuth">
+        <h1 class="paginaLogin_h1Acessar">
+            Acessar sistema</h1>
+        <label class="paginaLogin_lblLogin">
+            Login</label>
+        <label class="paginaLogin_lblSenha">
+            Senha</label>
+        <input type="text" id="txtLogin" name="txtLogin" class="paginaLogin_txtLogin" onkeypress="return objForm.fnPressEnter(event,objLogin.fnAcessar)" />
+        <input type="password" id="txtSenha" name="txtSenha" class="paginaLogin_txtSenha"
+            onkeypress="return objForm.fnPressEnter(event,objLogin.fnAcessar)" />
+        <img id="btnAcessar" class="paginaLogin_btnAcessar" src="@Url.Content("~/Content/Images/bgPaginaBtnAcessar.png")"
+            style="cursor: pointer;" onclick="objLogin.fnAcessar();" />
+    </div>
+</div>
+</form>

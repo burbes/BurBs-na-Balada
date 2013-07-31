@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="0.9.16">
+ <project-name>BurBsNaBalada DER</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="4ef8e314-6159-41e0-9763-978215c05a50" name="Usuarios" objectType="TABLE" physicalName="Usuarios" remarks="" >
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="eb66e871-8194-456c-bf71-e79213c77c46" autoIncrement="true" autoIncrementSequenceName="Usuarios_id_usuarios_seq" defaultValue="" name="id_usuarios" nullable="0" physicalName="id_usuarios" precision="11" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL3" populated="true" UUID="26ccc45e-9fe4-4000-b9a2-71c900c9e62c" autoIncrement="false" autoIncrementSequenceName="Usuarios_nome_seq" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL4" populated="true" UUID="de363447-3a08-4a7c-abf0-e3a53e629e81" autoIncrement="false" autoIncrementSequenceName="Usuarios_email_seq" defaultValue="" name="email" nullable="0" physicalName="email" precision="50" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL5" populated="true" UUID="65670783-c088-432a-8305-9f7ea728626c" autoIncrement="false" autoIncrementSequenceName="Usuarios_senha_seq" defaultValue="" name="senha" nullable="0" physicalName="senha" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL6" populated="true" UUID="97320e70-4f2b-4f2c-88dd-e65e8ff4aa85" autoIncrement="false" autoIncrementSequenceName="Usuarios_ativo_seq" defaultValue="" name="ativo" nullable="0" physicalName="ativo" precision="10" referenceCount="1" remarks="" scale="0" type="16" />
+    <column id="COL7" populated="true" UUID="c852afa6-188c-4854-8d76-54cc000e3810" autoIncrement="false" autoIncrementSequenceName="Permissoes_id_permissoes_seq" defaultValue="" name="id_permissoes" nullable="0" physicalName="id_permissoes" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX8" populated="true" UUID="56ea9d47-701d-402a-afd5-532e5309aa4a" clustered="false" name="id_usuarios" physicalName="id_usuarios" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC9" populated="true" UUID="a42495f6-f909-40f3-b642-66309e800432" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id_usuarios" physicalName="id_usuarios" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB10" populated="true" UUID="0917a048-135a-40b4-8d8b-333253a91938" name="Permissoes" objectType="TABLE" physicalName="Permissoes" remarks="" >
+   <folder id="FOLTAB101" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL11" populated="true" UUID="cc9f0b8f-9ff9-42e3-8bf1-8e1cee8aa3dd" autoIncrement="true" autoIncrementSequenceName="Permissoes_id_permissoes_seq" defaultValue="" name="id_permissoes" nullable="0" physicalName="id_permissoes" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL12" populated="true" UUID="a9fbf664-6245-4476-884d-0b59632b95bd" autoIncrement="false" autoIncrementSequenceName="Permissoes_permissoes_seq" defaultValue="" name="permissoes" nullable="0" physicalName="permissoes" precision="100" referenceCount="1" remarks="" scale="0" type="12" />
+    </folder>
+    <folder id="FOLTAB103" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB102" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB104" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX13" populated="true" UUID="dbb3a673-4bc3-47ce-b728-16ef9308ef72" clustered="false" name="id_permissoes" physicalName="id_permissoes" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC14" populated="true" UUID="8bfe81b3-918b-4c58-af50-46bdb109e32c" ascendingOrDescending="UNSPECIFIED" column-ref="COL11" name="id_permissoes" physicalName="id_permissoes" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL15" populated="true" UUID="932a2f5c-1a69-4d14-b2a8-da2c40f14248" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="Permissoes_Usuarios_fk" physicalName="Permissoes_Usuarios_fk" pk-table-ref="TAB10" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP16" populated="true" UUID="ed80a151-2ab7-4b07-a0c9-f97b56432996" fk-column-ref="COL7" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL11" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="271" y="268" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB10" x="490" y="134" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL15" pk-x="0" pk-y="33" fk-x="83" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="130"/>
+ </play-pen>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

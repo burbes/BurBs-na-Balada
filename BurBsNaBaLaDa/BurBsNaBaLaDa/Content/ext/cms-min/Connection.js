@@ -1,0 +1,1 @@
+Ext.override(Ext.data.Connection,{onStateChange:function(n){if(n.xhr.readyState==4){this.clearTimeout(n),n.xhr.response!=undefined&&n.xhr.response.substr(0,15)=="<!DOCTYPE html>"&&this.LogOut();this.onComplete(n);this.cleanup(n)}},LogOut:function(){window.location.href=window.location.href}})

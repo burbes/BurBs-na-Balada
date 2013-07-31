@@ -1,0 +1,1 @@
+Ext.form.field.Hidden.override({isSubmit:!1,getSubmitData:function(){var n=this,t=null;return n.submitValue&&!n.isFileUpload()&&(t={},t[n.getName()]=""+n.getValue()),t},getModelData:function(){var t=this,n=null;return t.isFileUpload()||(n={},n[t.getName()]=t.getValue()),n}})

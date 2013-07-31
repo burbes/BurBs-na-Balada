@@ -1,0 +1,5 @@
+﻿.estruturaTopo { background-color:#e60811; }
+.estruturaTopo .bgTopo { background:url(Images/bgTopo_gisConsult.png) 0 0 no-repeat; }
+
+.corpoLeft .menuLeft_wrapNavegacao div.menuPrincipalTopo { background:url(Images/bgMenuTopo.png) 0 0 no-repeat; }
+.corpoLeft .menuLeft_wrapNavegacao div.menuPrincipalRodape { background:url(Images/bgMenuRodape.png) 0 0 no-repeat; }

@@ -1,0 +1,7 @@
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\bin\CMS.dll
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\bin\CMS.pdb
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\bin\EntityFramework.dll
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\bin\EntityFramework.xml
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\obj\Debug\ResolveAssemblyReference.cache
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\obj\Debug\CMS.dll
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\CMS\obj\Debug\CMS.pdb

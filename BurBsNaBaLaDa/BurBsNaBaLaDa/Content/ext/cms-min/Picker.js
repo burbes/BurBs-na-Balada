@@ -1,0 +1,1 @@
+Ext.form.field.Picker.override({initEvents:function(){var n=this;n.callParent(),n.keyNav=Ext.create("Ext.util.KeyNav",n.inputEl,{down:function(){n.isExpanded||n.hideTrigger===!0||n.onTriggerClick()},esc:n.collapse,scope:n,forceKeyDown:!0}),n.editable||n.mon(n.inputEl,"click",n.onTriggerClick,n),Ext.isGecko&&n.inputEl.dom.setAttribute("autocomplete","off")}})

@@ -1,0 +1,12 @@
+D:\Desenvolvimento\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\bin\Debug\burbsDB.dll.config
+D:\Desenvolvimento\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\bin\Debug\burbsDB.dll
+D:\Desenvolvimento\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\bin\Debug\burbsDB.pdb
+D:\Desenvolvimento\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\obj\Debug\ResolveAssemblyReference.cache
+D:\Desenvolvimento\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\obj\Debug\burbsDB.dll
+D:\Desenvolvimento\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\obj\Debug\burbsDB.pdb
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\bin\Debug\burbsDB.dll.config
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\bin\Debug\burbsDB.dll
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\bin\Debug\burbsDB.pdb
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\obj\Debug\ResolveAssemblyReference.cache
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\obj\Debug\burbsDB.dll
+D:\Desenvolvimento.Old\BurBsNaBaLaDa\BurBsNaBaLaDa\burbsDB\obj\Debug\burbsDB.pdb

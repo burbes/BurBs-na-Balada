@@ -1,0 +1,14 @@
+﻿@{
+
+    if (Session["USUARIO"] == null)
+    {
+        HttpContext.Current.Response.Redirect("~/Login/");
+        //HttpContext.Current.Response.Redirect("~/Home/");
+    }
+    //else
+    //{
+    //}
+
+}
+PAGINA INICIAL
+<br />

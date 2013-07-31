@@ -1,0 +1,6 @@
+D:\Desenvolvimento\BurBsNaBaLaDa\MvcMovie\MvcMovie\bin\MvcMovie.dll
+D:\Desenvolvimento\BurBsNaBaLaDa\MvcMovie\MvcMovie\bin\MvcMovie.pdb
+D:\Desenvolvimento\BurBsNaBaLaDa\MvcMovie\MvcMovie\obj\Debug\ResolveAssemblyReference.cache
+D:\Desenvolvimento\BurBsNaBaLaDa\MvcMovie\MvcMovie\obj\Debug\MvcMovie.dll
+D:\Desenvolvimento\BurBsNaBaLaDa\MvcMovie\MvcMovie\obj\Debug\MvcMovie.pdb
+D:\Desenvolvimento\BurBsNaBaLaDa\MvcMovie\MvcMovie\bin\EntityFramework.dll

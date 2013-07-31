@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BurBsNaBaladaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BurBsNaBaladaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Eventos" EntityType="BurBsNaBaladaModel.Eventos" />
+    <EntitySet Name="Galeria" EntityType="BurBsNaBaladaModel.Galeria" />
+    <EntitySet Name="sysdiagrams" EntityType="BurBsNaBaladaModel.sysdiagrams" />
+    <EntitySet Name="Usuarios" EntityType="BurBsNaBaladaModel.Usuarios" />
+    <AssociationSet Name="FK_Galeria_Eventos" Association="BurBsNaBaladaModel.FK_Galeria_Eventos">
+      <End Role="Eventos" EntitySet="Eventos" />
+      <End Role="Galeria" EntitySet="Galeria" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Eventos">
+    <Key>
+      <PropertyRef Name="id_eventos" />
+    </Key>
+    <Property Name="id_eventos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="local" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="data" Type="DateTime" Nullable="false" />
+    <Property Name="hora" Type="Time" Nullable="false" />
+    <Property Name="descricao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="img_icone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Galeria" Relationship="BurBsNaBaladaModel.FK_Galeria_Eventos" FromRole="Eventos" ToRole="Galeria" />
+  </EntityType>
+  <EntityType Name="Galeria">
+    <Key>
+      <PropertyRef Name="id_galeria" />
+      <PropertyRef Name="nome_arquivo" />
+      <PropertyRef Name="id_eventos" />
+    </Key>
+    <Property Name="id_galeria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_arquivo" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="id_eventos" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Eventos" Relationship="BurBsNaBaladaModel.FK_Galeria_Eventos" FromRole="Galeria" ToRole="Eventos" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="id_usuarios" />
+    </Key>
+    <Property Name="id_usuarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="senha" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Galeria_Eventos">
+    <End Role="Eventos" Type="BurBsNaBaladaModel.Eventos" Multiplicity="1" />
+    <End Role="Galeria" Type="BurBsNaBaladaModel.Galeria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventos">
+        <PropertyRef Name="id_eventos" />
+      </Principal>
+      <Dependent Role="Galeria">
+        <PropertyRef Name="id_eventos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

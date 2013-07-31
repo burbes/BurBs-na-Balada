@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BurBsNaBaladaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BurBsNaBaladaModelStoreContainer">
+    <EntitySet Name="Eventos" EntityType="BurBsNaBaladaModel.Store.Eventos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Galeria" EntityType="BurBsNaBaladaModel.Store.Galeria" store:Type="Tables" store:Schema="dbo" store:Name="Galeria">
+      <DefiningQuery>SELECT 
+      [Galeria].[id_galeria] AS [id_galeria], 
+      [Galeria].[nome_arquivo] AS [nome_arquivo], 
+      [Galeria].[id_eventos] AS [id_eventos]
+      FROM [dbo].[Galeria] AS [Galeria]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sysdiagrams" EntityType="BurBsNaBaladaModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="BurBsNaBaladaModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Galeria_Eventos" Association="BurBsNaBaladaModel.Store.FK_Galeria_Eventos">
+      <End Role="Eventos" EntitySet="Eventos" />
+      <End Role="Galeria" EntitySet="Galeria" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Eventos">
+    <Key>
+      <PropertyRef Name="id_eventos" />
+    </Key>
+    <Property Name="id_eventos" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="local" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="data" Type="date" Nullable="false" />
+    <Property Name="hora" Type="time" Nullable="false" />
+    <Property Name="descricao" Type="text" />
+    <Property Name="img_icone" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'BurBsNaBalada.dbo.Galeria' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Galeria">
+    <Key>
+      <PropertyRef Name="id_galeria" />
+      <PropertyRef Name="nome_arquivo" />
+      <PropertyRef Name="id_eventos" />
+    </Key>
+    <Property Name="id_galeria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nome_arquivo" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="id_eventos" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="id_usuarios" />
+    </Key>
+    <Property Name="id_usuarios" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="nome" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="senha" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Galeria_Eventos">
+    <End Role="Eventos" Type="BurBsNaBaladaModel.Store.Eventos" Multiplicity="1" />
+    <End Role="Galeria" Type="BurBsNaBaladaModel.Store.Galeria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eventos">
+        <PropertyRef Name="id_eventos" />
+      </Principal>
+      <Dependent Role="Galeria">
+        <PropertyRef Name="id_eventos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

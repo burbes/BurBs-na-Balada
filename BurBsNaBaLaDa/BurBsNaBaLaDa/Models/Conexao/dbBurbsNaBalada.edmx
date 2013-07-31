@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BurBsNaBaladaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BurBsNaBaladaModelStoreContainer">
+          <EntitySet Name="Eventos" EntityType="BurBsNaBaladaModel.Store.Eventos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Galeria" EntityType="BurBsNaBaladaModel.Store.Galeria" store:Type="Tables" store:Schema="dbo" store:Name="Galeria">
+            <DefiningQuery>SELECT 
+      [Galeria].[id_galeria] AS [id_galeria], 
+      [Galeria].[nome_arquivo] AS [nome_arquivo], 
+      [Galeria].[id_eventos] AS [id_eventos]
+      FROM [dbo].[Galeria] AS [Galeria]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysdiagrams" EntityType="BurBsNaBaladaModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuarios" EntityType="BurBsNaBaladaModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Galeria_Eventos" Association="BurBsNaBaladaModel.Store.FK_Galeria_Eventos">
+            <End Role="Eventos" EntitySet="Eventos" />
+            <End Role="Galeria" EntitySet="Galeria" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Eventos">
+          <Key>
+            <PropertyRef Name="id_eventos" />
+          </Key>
+          <Property Name="id_eventos" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="local" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="data" Type="date" Nullable="false" />
+          <Property Name="hora" Type="time" Nullable="false" />
+          <Property Name="descricao" Type="text" />
+          <Property Name="img_icone" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'BurBsNaBalada.dbo.Galeria' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="id_galeria" />
+            <PropertyRef Name="nome_arquivo" />
+            <PropertyRef Name="id_eventos" />
+          </Key>
+          <Property Name="id_galeria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome_arquivo" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="id_eventos" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id_usuarios" />
+          </Key>
+          <Property Name="id_usuarios" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="senha" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Galeria_Eventos">
+          <End Role="Eventos" Type="BurBsNaBaladaModel.Store.Eventos" Multiplicity="1" />
+          <End Role="Galeria" Type="BurBsNaBaladaModel.Store.Galeria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eventos">
+              <PropertyRef Name="id_eventos" />
+            </Principal>
+            <Dependent Role="Galeria">
+              <PropertyRef Name="id_eventos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BurBsNaBaladaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BurBsNaBaladaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Eventos" EntityType="BurBsNaBaladaModel.Eventos" />
+          <EntitySet Name="Galeria" EntityType="BurBsNaBaladaModel.Galeria" />
+          <EntitySet Name="sysdiagrams" EntityType="BurBsNaBaladaModel.sysdiagrams" />
+          <EntitySet Name="Usuarios" EntityType="BurBsNaBaladaModel.Usuarios" />
+          <AssociationSet Name="FK_Galeria_Eventos" Association="BurBsNaBaladaModel.FK_Galeria_Eventos">
+            <End Role="Eventos" EntitySet="Eventos" />
+            <End Role="Galeria" EntitySet="Galeria" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Eventos">
+          <Key>
+            <PropertyRef Name="id_eventos" />
+          </Key>
+          <Property Name="id_eventos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="local" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" />
+          <Property Name="hora" Type="Time" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="img_icone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Galeria" Relationship="BurBsNaBaladaModel.FK_Galeria_Eventos" FromRole="Eventos" ToRole="Galeria" />
+        </EntityType>
+        <EntityType Name="Galeria">
+          <Key>
+            <PropertyRef Name="id_galeria" />
+            <PropertyRef Name="nome_arquivo" />
+            <PropertyRef Name="id_eventos" />
+          </Key>
+          <Property Name="id_galeria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome_arquivo" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="id_eventos" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Eventos" Relationship="BurBsNaBaladaModel.FK_Galeria_Eventos" FromRole="Galeria" ToRole="Eventos" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id_usuarios" />
+          </Key>
+          <Property Name="id_usuarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="senha" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Galeria_Eventos">
+          <End Role="Eventos" Type="BurBsNaBaladaModel.Eventos" Multiplicity="1" />
+          <End Role="Galeria" Type="BurBsNaBaladaModel.Galeria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eventos">
+              <PropertyRef Name="id_eventos" />
+            </Principal>
+            <Dependent Role="Galeria">
+              <PropertyRef Name="id_eventos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BurBsNaBaladaModelStoreContainer" CdmEntityContainer="BurBsNaBaladaEntities">
+          <EntitySetMapping Name="Eventos"><EntityTypeMapping TypeName="BurBsNaBaladaModel.Eventos"><MappingFragment StoreEntitySet="Eventos">
+            <ScalarProperty Name="id_eventos" ColumnName="id_eventos" />
+            <ScalarProperty Name="titulo" ColumnName="titulo" />
+            <ScalarProperty Name="local" ColumnName="local" />
+            <ScalarProperty Name="data" ColumnName="data" />
+            <ScalarProperty Name="hora" ColumnName="hora" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+            <ScalarProperty Name="img_icone" ColumnName="img_icone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Galeria"><EntityTypeMapping TypeName="BurBsNaBaladaModel.Galeria"><MappingFragment StoreEntitySet="Galeria">
+            <ScalarProperty Name="id_galeria" ColumnName="id_galeria" />
+            <ScalarProperty Name="nome_arquivo" ColumnName="nome_arquivo" />
+            <ScalarProperty Name="id_eventos" ColumnName="id_eventos" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams"><EntityTypeMapping TypeName="BurBsNaBaladaModel.sysdiagrams"><MappingFragment StoreEntitySet="sysdiagrams">
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+            <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+            <ScalarProperty Name="version" ColumnName="version" />
+            <ScalarProperty Name="definition" ColumnName="definition" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Usuarios"><EntityTypeMapping TypeName="BurBsNaBaladaModel.Usuarios"><MappingFragment StoreEntitySet="Usuarios">
+            <ScalarProperty Name="id_usuarios" ColumnName="id_usuarios" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+            <ScalarProperty Name="senha" ColumnName="senha" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="dbBurbsNaBalada">
+        <EntityTypeShape EntityType="BurBsNaBaladaModel.Eventos" Width="1.5" PointX="0.75" PointY="0.875" Height="2.2496956380208335" IsExpanded="true" />
+        <EntityTypeShape EntityType="BurBsNaBaladaModel.Galeria" Width="1.5" PointX="3.125" PointY="0.875" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BurBsNaBaladaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="3.75" Height="1.7566536458333322" IsExpanded="true" />
+        <EntityTypeShape EntityType="BurBsNaBaladaModel.Usuarios" Width="1.5" PointX="4.75" PointY="3.75" Height="1.5923063151041657" IsExpanded="true" />
+        <AssociationConnector Association="BurBsNaBaladaModel.FK_Galeria_Eventos" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.6711531575520837" />
+          <ConnectorPoint PointX="3.125" PointY="1.6711531575520837" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

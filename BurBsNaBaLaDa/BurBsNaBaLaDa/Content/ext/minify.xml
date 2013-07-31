@@ -1,0 +1,97 @@
+﻿<root>
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Base.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Base.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Checkbox.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Checkbox.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\CheckColumn.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\CheckColumn.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\ColorField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\ColorField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Combobox.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Combobox.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Connection.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Connection.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\CurrencyField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\CurrencyField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\DateField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\DateField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\FieldBase.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\FieldBase.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\FileUpload.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\FileUpload.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\FormBasic.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\FormBasic.js" />
+  </output>
+
+   <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Hidden.js">
+	  <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Hidden.js" />
+   </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\InputTextMask.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\InputTextMask.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Login.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Login.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Mensagens.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Mensagens.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\MessageBox.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\MessageBox.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\MonthField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\MonthField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\NumberField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\NumberField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Picker.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Picker.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Store.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Store.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Template.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Template.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\TextField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\TextField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\TimeField.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\TimeField.js" />
+  </output>
+  
+  <output path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms-min\Util.js">
+    <input path="D:\Desenvolvimento\egGS\CMS\CMS\Content\ext\cms\Util.js" />
+  </output>
+</root>
